@@ -7,7 +7,7 @@ theme_set(theme_bw() + theme(axis.title.y = element_text(angle = 0)))
 # load 2009 customer level profit data
 DATA9 <- read_csv('data_2009.csv')
 
-#### QUESTION 1 ####
+# Question 1: How much variation in profitability is observed across customers?
 
 sum_profit9 <- sum(select(DATA9, profit9))
 
@@ -29,12 +29,8 @@ ggplot(DATA9) +
   geom_line(aes(x=per_customer, y=per_profit9)) +
   labs(x = "Customer Percentile", y = "Cumulative\nProfit\nPercentile")
 
-
-
-#### QUESTION 2 ####
-# Based on the 1999 sample of customers, 
-# what can Green conclude about
-# the average profitability of Pilgrim Bank customers?
+# Question 2: Based on the 1999 sample of customers, what can Pilgrim conclude about 
+# he average profitability of Pilgrim Bank customers?
 
 # Answer
 # We can calculate sample mean.
