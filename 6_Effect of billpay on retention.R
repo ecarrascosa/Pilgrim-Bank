@@ -1,8 +1,4 @@
-#Chapter 11 - Logistic Regression
-#PowerPoint Slide 4
-#Question
-
-#What is the effect of customer use of electronic bill pay on retention?
+# What is the effect of customer use of electronic bill pay on retention?
 
 # The retention rate is a categorical variable. Yes we retained them or no we didn't (1, or 0)
 
@@ -35,7 +31,7 @@ DATA <- DATA %>%
 DATA <- DATA %>%
   mutate(retained = !is.na(profit9) & !is.na(profit0)) * 1
 
-# Question 4, Does the use of electronic bill pay tells us anything about the retention of that
+# Question 4, Does the use of electronic bill pay tell us anything about the retention of that
 # customer?
 
 # Since our objective is to explain the effect of bill pay on retention, which is a
@@ -60,7 +56,6 @@ tenure9               2.981534e-02 2.372820e-03 12.5653611  3.273768e-36
 factor(district)1200  4.718767e-02 5.380192e-02  0.8770630  3.804524e-01
 factor(district)1300  2.667161e-02 6.671230e-02  0.3998004  6.893035e-01
 
-# Interpretation of sample result
 # Bill pay has a negative effect on retention. In other words we are less likely to retain
 # someone who uses bill pay
 
@@ -82,14 +77,6 @@ factor(district)1300 1.0270305   1.068988
 # According to the above results, in our "sample",
 # the odds of retaining modern customers (vs. losing them) are 0.55 times the odds of retaining traditional customers.
 
-# (
-# odds are a transformation of probability. There are only two groups of people who like working with odds:
-#   - gamblers
-#   - statisticians who invented logistic regression
-# odds = p / (1-p) where p stands for probability of event
-
-# to learn more about odds refer to https://www.youtube.com/watch?v=Vu4x2DKn12g
-# )
 
 # Generalizing using 99% confidence interval
 
